@@ -49,11 +49,14 @@
   align-content: center;
   align-items: center;
 }
+.drawer-name {
+  font-family: 'Carter One', cursive;
+}
 
 .sub-title {
   font-family: 'Carter One', cursive;
   font-weight: bolder;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 .pfont {
@@ -99,4 +102,10 @@
   font-size: xx-large;
   font-family: var(--font-serif);
   text-align: center;
+}
+@media only screen and (max-width: 500px) {
+  .img,
+  .cards {
+    width: 300px;
+  }
 }

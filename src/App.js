@@ -38,17 +38,17 @@ export default function App() {
   // drawer
   const array = [
     {
-      name: <div className="pfont">Home</div>,
+      name: <div className="drawer-name">Home</div>,
       onClick: "/",
       icon: <HomeIcon />,
     },
     {
-      name: <div className="pfont">Characters</div>,
+      name: <div className="drawer-name">Characters</div>,
       onClick: "/characters",
       icon: <PeopleIcon />,
     },
     {
-      name: <div className="pfont">Add Characters</div>,
+      name: <div className="drawer-name">Add Characters</div>,
       onClick: "/characters/add",
       icon: <PersonAddAlt1Icon />,
     }
