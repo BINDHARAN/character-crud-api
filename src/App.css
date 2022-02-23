@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Allerta+Stencil|Source+Code+Pro:900');
+
+/* detail root variables */
+:root {
+  --font-serif: 'Allerta Stencil', sans-serif;
+  --font-mono: 'Source Code Pro', monospace;
+  --color-text: #efeee7;
+  --color-bg: #223458;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.error-img {
+  width: 100%;
+  height: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.img {
+  width: 400px;
+  height: auto;
+  object-fit: cover;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.img:hover {
+  transform: translateY(1px);
+}
+.card-container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.cards {
+  width: 400px;
+  font-size: 20px;
+  height: min-content;
+}
+
+.cardtitle {
+  font-family: 'Chicle', cursive;
+  font-size: 25px;
+  margin: 0px 2px 10px 2px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.sub-title {
+  font-family: 'Carter One', cursive;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+
+.pfont {
+  font-family: var(--font-serif);
+  text-align: justify;
+}
+
+.button-group {
+  display: flex;
+  align-items: center;
+}
+
+.edit-loadmsg {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.character-page {
+  margin-top: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+.character_form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  gap: 10px;
+  padding: 0px 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.character_form input {
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 18px;
+}
+
+.button {
+  padding: 12px;
+  border-radius: 20px;
+}
+
+.home {
+  margin-top: 190px;
+  font-size: xx-large;
+  font-family: var(--font-serif);
+  text-align: center;
 }
