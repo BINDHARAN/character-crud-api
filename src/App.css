@@ -50,7 +50,14 @@
   align-items: center;
 }
 .drawer-name {
+  font-family: var(--font-serif);
+}
+
+.drawer-icon {
   font-family: 'Carter One', cursive;
+  display: flex;
+  font-size: larger;
+  align-items: center;
 }
 
 .sub-title {

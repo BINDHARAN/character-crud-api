@@ -79,10 +79,10 @@ export default function App() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {array.map(({ name, onClick, icon }) => (
+        {array.map(({ name, onClick, icon }, index) => (
           <ListItem
             button
-            key={name}
+            key={index}
             onClick={() => {
               history.push(onClick);
             }}
@@ -110,8 +110,10 @@ export default function App() {
               {["left"].map((anchor) => (
                 <Fragment key={anchor}>
                   <Button color="inherit" onClick={toggleDrawer(anchor, true)}>
-                    <MenuIcon />
-                    Menu
+                    <div className="drawer-icon">
+                      <MenuIcon />
+                      Menu
+                    </div>
                   </Button>
                   <Drawer
                     anchor={anchor}
