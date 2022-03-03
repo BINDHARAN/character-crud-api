@@ -5,9 +5,7 @@ import { api } from "./character";
 import { useFormik } from "formik";
 import * as yup from "yup";
 
-
-
-
+// vslidationschema
 
 export const formValidationSchema = yup.object({
     post: yup.string()
@@ -34,7 +32,7 @@ export function AddCharacters() {
 
     const history = useHistory()
 
-
+    // inital value
     const formik = useFormik({
         initialValues: {
             post: "",

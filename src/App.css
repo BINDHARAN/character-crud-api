@@ -13,11 +13,13 @@
   margin: 0;
   padding: 0;
 }
+/* 404 error img */
 .error-img {
   width: 100%;
   height: auto;
 }
 
+/* card img */
 .img {
   width: 400px;
   height: auto;
@@ -27,6 +29,8 @@
 .img:hover {
   transform: translateY(1px);
 }
+
+/* card container */
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -34,12 +38,14 @@
   justify-content: space-around;
 }
 
+/* cards */
 .cards {
   width: 400px;
   font-size: 20px;
   height: min-content;
 }
 
+/* title of the card */
 .cardtitle {
   font-family: 'Chicle', cursive;
   font-size: 25px;
@@ -49,6 +55,8 @@
   align-content: center;
   align-items: center;
 }
+
+/* mui drawer */
 .drawer-name {
   font-family: var(--font-serif);
 }
@@ -59,6 +67,7 @@
   font-size: larger;
   align-items: center;
 }
+
 
 .sub-title {
   font-family: 'Carter One', cursive;
@@ -76,15 +85,19 @@
   align-items: center;
 }
 
+/* loading msg */
 .edit-loadmsg {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+/* character-page */
 .character-page {
   margin-top: 40px;
 }
 
+/* character-form */
 .character_form {
   display: flex;
   flex-direction: column;
@@ -103,7 +116,7 @@
   padding: 12px;
   border-radius: 20px;
 }
-
+/* home page */
 .home {
   margin-top: 190px;
   font-size: xx-large;

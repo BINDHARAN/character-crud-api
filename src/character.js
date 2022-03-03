@@ -8,12 +8,13 @@ import Tooltip from '@mui/material/Tooltip';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 
+// mock api 
 export const api = "https://6209ed8f92946600171c55c2.mockapi.io/character"
 
 export function CharacterList() {
     const history = useHistory()
     const [character, setcharacter] = useState([]);
-
+    // Read
     const getcharacter = () => {
 
         fetch(`${api}`, {
@@ -25,7 +26,7 @@ export function CharacterList() {
     }
 
     useEffect(() => getcharacter(), []);
-
+    // Delete
     const deleteCharacter = (id) => {
         fetch(`${api}/${id}`, {
             method: "DELETE"
@@ -58,6 +59,7 @@ export function CharacterList() {
                             </Tooltip>
 
                         }
+                        //edit
                         editButton={
                             <Tooltip title="Edit">
                                 <IconButton aria-label="edit button"
@@ -76,6 +78,8 @@ export function CharacterList() {
         </div>
     );
 }
+
+// characters cards
 function Character({ post, name, Superpowers, Weapons, deleteButton, editButton }) {
 
 
@@ -102,6 +106,9 @@ function Character({ post, name, Superpowers, Weapons, deleteButton, editButton 
         </Card>
     );
 }
+
+
+// like and dislike btn and edit and delete btn
 
 function Counter({ deleteBtn, editButton }) {
     const [like, setLike] = useState(0);

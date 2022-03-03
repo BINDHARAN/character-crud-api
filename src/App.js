@@ -23,9 +23,9 @@ import HomeIcon from '@mui/icons-material/Home';
 import PeopleIcon from '@mui/icons-material/People';
 import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
 
+
+//app component
 export default function App() {
-
-
   const history = useHistory();
 
   const [mode, setMode] = useState("dark")
@@ -35,7 +35,7 @@ export default function App() {
     },
   });
 
-  // drawer
+  // MUI =>drawer
   const array = [
     {
       name: <div className="drawer-name">Home</div>,
@@ -95,6 +95,7 @@ export default function App() {
     </Box>
   );
   return (
+    //MUI =>theme and appbar
     <ThemeProvider theme={theme}>
       <Paper elevation={4} style={{ borderRadius: "0px", minHeight: "100vh" }} >
         <div className="App">
@@ -124,6 +125,9 @@ export default function App() {
                   </Drawer>
                 </Fragment>
               ))}
+
+              {/* light mode and dark mode logic */}
+
               <Button color="inherit"
                 style={{ marginLeft: "auto" }}
                 startIcon={mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
@@ -133,12 +137,19 @@ export default function App() {
             </Toolbar>
           </AppBar>
 
+          {/* Route setup */}
+
           <Switch>
+
+            {/* <--- characters-add page ---> */}
+
             <Route path="/characters/add">
               <div className="character-page ">
                 <AddCharacters />
               </div>
             </Route>
+
+            {/* <--- characters-edit page ---> */}
 
             <Route path="/characters/edit/:id">
               <div className="character-page ">
@@ -146,18 +157,22 @@ export default function App() {
               </div>
             </Route>
 
-            <Route path="/characters">
+            {/* <--- characters page ---> */}
 
+            <Route path="/characters">
               <div className="character-page ">
                 <CharacterList />
               </div>
             </Route>
 
-            <Route exact path="/">
+            {/* <--- Home page ---> */}
 
+            <Route exact path="/">
               <div className="character-page ">
                 < Msg />
               </div>
+
+              {/* <--- 404 error page ---> */}
 
             </Route>
             <Route path="**"> <NotFound /> </Route>
